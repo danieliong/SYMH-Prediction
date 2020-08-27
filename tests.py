@@ -13,9 +13,4 @@ from GeoMagTS.model import GeoMagTSRegressor
 
 from generate_ar_data import ARData, fixed_ar_coefficients
 
-ar_data = ARData(num_datapoints=100, 
-                 coeffs=fixed_ar_coefficients[5],
-                 num_prev=5,
-                 noise_var=0)
-
-ar_data.generate_data()
+# TODO
