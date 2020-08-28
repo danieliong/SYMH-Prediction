@@ -110,20 +110,22 @@ info_file.write('test_storms: '+str(test_storms)+'\n')
 info_file.write('\n')
 info_file.close()
 
-for model in MODELS_TO_TUNE:
+gs_dict = dict()
+for i in range(len(MODELS_TO_TUNE)):
+    model_name = MODELS_TO_TUNE[i]
     if TEST:
-        fname = run_dir+'gs_'+model+'_test'+str(RUN_NUM)+'.pkl'
+        # fname = run_dir+'gs_'+model_name+'_test'+str(RUN_NUM)+'.pkl'
         param_grid_model = param_grid_test.copy()
     else:
-        fname = run_dir+'gs_'+model+'_'+str(RUN_NUM)+'.pkl'
+        # fname = run_dir+'gs_'+model_name+'_'+str(RUN_NUM)+'.pkl'
         param_grid_model = param_grid.copy()
-    if model == 'linear':
+    if model_name == 'linear':
         # Linear AR-X
         model = GeoMagARX()
-    elif model == 'nn':
+    elif model_name == 'nn':
         # Neural Network AR-X
         narx = KerasRegressor(build_fn=create_narx_model)
-        narx_model = GeoMagTSRegressor()
+        model = GeoMagTSRegressor()
         if TEST:
             param_grid_model.update(
                 {'base_estimator': [narx],
@@ -136,12 +138,18 @@ for model in MODELS_TO_TUNE:
             )
     # Perform grid search CV    
     if not path.exists(fname):
-        gridsearch = GridSearchCV(estimator=model,
+        gs_dict[model_name] = GridSearchCV(estimator=model,
                                     param_grid=param_grid_model,
                                     cv=cv, n_jobs=N_JOBS, verbose=0)
-        gridsearch.fit(X_train, y_train,
+        gs_dict[model_name].fit(X_train, y_train,
                             groups=storm_labels_train)
-        joblib.dump(gridsearch, fname)
+
+
+gs_fname = run_dir+'gs_'
+if TEST:
+    gs_fname = gs_fname+'test_'
+gs_fname = gs_fname+'run'+str(RUN_NUM)+'.pkl'
+joblib.dump(gs_dict, gs_fname)
 
 
 # gridsearch_ar = joblib.load(DIR+'ar.pkl')
