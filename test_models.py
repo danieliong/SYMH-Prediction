@@ -61,9 +61,9 @@ storm_times_test = train_test_split.get_test_storm_times(storm_times)
 ##### Model fitting 
 
 # Model fitting parameters 
+pred_step = 12
 auto_order = 24
-exog_order = 18
-pred_step = 24
+exog_order = 36
 transformer_X = MinMaxScaler(feature_range=(-0.8, 0.8))
 transformer_y = None
 # transformer_y = MinMaxScaler(feature_range=(-0.8, 0.8))
