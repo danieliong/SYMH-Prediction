@@ -16,12 +16,13 @@ import os
 from os import path
 import joblib
 
+# TODO: Write this as a module
+
 DIR = 'tuning/'
 
-N_JOBS = -1
 TEST = True
-RUN_NUM = 1
 MODELS_TO_TUNE = ['linear']
+N_JOBS = -1
 
 DATA_FILE = '../../data/omni_2010-2019.pkl'
 STORMTIMES_FILE = '../../data/stormtimes_qusai.pkl'
@@ -87,24 +88,25 @@ param_grid_test = {
 # IDEA: Write function that updates a previously run GridSearchCV
 
 # Make dir for current run and save information to a text file
+RUN_NUM = 1
 while path.exists(DIR+"run"+str(RUN_NUM)+"/"):
     RUN_NUM = RUN_NUM + 1
 run_dir = DIR+"run"+str(RUN_NUM)+"/"
 os.mkdir(run_dir)
 
-info_file = open(run_dir+"info.txt", "a")
-info_file.write("RUN #: "+str(RUN_NUM)+'\n')
-info_file.write("-------------------------------------------"+'\n')
+info_file = open(run_dir+"run"+str(RUN_NUM)+"_info.txt", "a")
+# info_file.write("RUN #: "+str(RUN_NUM)+'\n')
+# info_file.write("-------------------------------------------"+'\n')
 info_file.write("TEST: "+str(TEST)+'\n')
 info_file.write("MODELS_TO_TUNE: "+', '.join(MODELS_TO_TUNE)+'\n')
 info_file.write("DATA_FILE: "+DATA_FILE+'\n')
 info_file.write("STORMTIMES_FILE: "+STORMTIMES_FILE+'\n')
-info_file.write("\n")
-info_file.write('Time resolution: '+time_resolution+'\n')
-info_file.write('Feature columns: '+', '.join(feature_columns)+'\n')
-info_file.write('Storms deleted: '+str(storms_to_delete)+'\n')
-info_file.write('# of storms: '+str(n_storms)+'\n')
-info_file.write('Test storms: '+str(test_storms)+'\n')
+# info_file.write("\n")
+info_file.write('time_resolution: '+time_resolution+'\n')
+info_file.write('feature_columns: '+', '.join(feature_columns)+'\n')
+info_file.write('storms_deleted: '+str(storms_to_delete)+'\n')
+info_file.write('n_storms: '+str(n_storms)+'\n')
+info_file.write('test_storms: '+str(test_storms)+'\n')
 info_file.write('\n')
 info_file.close()
 
