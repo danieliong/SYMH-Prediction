@@ -91,7 +91,10 @@ param_grid_test = {
 RUN_NUM = 1
 while path.exists(DIR+"run"+str(RUN_NUM)+"/"):
     RUN_NUM = RUN_NUM + 1
-run_dir = DIR+"run"+str(RUN_NUM)+"/"
+run_dir = DIR+"run"+str(RUN_NUM)
+if TEST:
+    run_dir = run_dir + "_test"
+run_dir = run_dir + "/"
 os.mkdir(run_dir)
 
 info_file = open(run_dir+"run"+str(RUN_NUM)+"_info.txt", "a")
@@ -104,10 +107,13 @@ info_file.write("STORMTIMES_FILE: "+STORMTIMES_FILE+'\n')
 # info_file.write("\n")
 info_file.write('time_resolution: '+time_resolution+'\n')
 info_file.write('feature_columns: '+', '.join(feature_columns)+'\n')
-info_file.write('storms_deleted: '+str(storms_to_delete)+'\n')
+info_file.write('storms_deleted: '+
+                ', '.join(list(map(str, storms_to_delete)))+'\n'
+                )
 info_file.write('n_storms: '+str(n_storms)+'\n')
-info_file.write('test_storms: '+str(test_storms)+'\n')
-info_file.write('\n')
+info_file.write('test_storms: '+
+                ', '.join(list(map(str, test_storms)))+'\n'
+                )
 info_file.close()
 
 gs_dict = dict()
@@ -134,15 +140,15 @@ for i in range(len(MODELS_TO_TUNE)):
         else:
             param_grid_model.update(
                 {'base_estimator': [narx],
-                'base_estimator__n_hidden': [12, 16, 18, 20, 24, 30], 'base_estimator__learning_rate': [.001, .005, .01, .05, .1, .5]}
+                'base_estimator__n_hidden': [12, 18, 24, 30], 'base_estimator__learning_rate': [.001, .005, .01, .05, .1]}
             )
     # Perform grid search CV    
-    if not path.exists(fname):
-        gs_dict[model_name] = GridSearchCV(estimator=model,
-                                    param_grid=param_grid_model,
-                                    cv=cv, n_jobs=N_JOBS, verbose=0)
-        gs_dict[model_name].fit(X_train, y_train,
-                            groups=storm_labels_train)
+    # if not path.exists(fname):
+    gs_dict[model_name] = GridSearchCV(estimator=model,
+                                param_grid=param_grid_model,
+                                cv=cv, n_jobs=N_JOBS, verbose=0)
+    gs_dict[model_name].fit(X_train, y_train,
+                        groups=storm_labels_train)
 
 
 gs_fname = run_dir+'gs_'
@@ -150,12 +156,3 @@ if TEST:
     gs_fname = gs_fname+'test_'
 gs_fname = gs_fname+'run'+str(RUN_NUM)+'.pkl'
 joblib.dump(gs_dict, gs_fname)
-
-
-# gridsearch_ar = joblib.load(DIR+'ar.pkl')
-# ar_model.set_params(**gridsearch_ar.best_params_)
-# ar_model.fit(X_train, y_train)
-# ar_model.plot_predict(X_test, y_test, 
-#                       times=storm_times_test,
-#                       display_info=True)
-# ar_model.get_coef_df(feature_columns)
