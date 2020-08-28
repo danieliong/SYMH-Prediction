@@ -1,0 +1,3 @@
+[submodule "GeoMagTS"]
+	path = GeoMagTS
+	url = https://github.com/danieliong/GeoMagTS
