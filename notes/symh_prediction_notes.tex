@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+
+\title{SYM-H Prediction Notes}
+\author{Daniel Iong}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+At time $t$, let 
+\begin{itemize}
+    \item $y(t)$ denote SYM-H
+    \item $X(t)$ denote the solar wind parameters that are available to us (i.e. what is in the dataset)
+    \item $\tilde{X}(t)$ denote the actual solar wind parameters.
+\end{itemize}
+
+\section{Propagation time/Time shift}
+
+\begin{itemize}
+    \item Let $\alpha(t) = D / V_x(t)$, where $D \approx 1.5 \times 10^6$ km.
+    \item Our initial goal is to fit a model with the following form:
+    \begin{align*}
+        y(t + \alpha(t)) = f \Bigl(y(t),\dots,y(t- L\Delta t), \tilde{X}(t + \alpha(t)),\dots, \tilde{X}(t + \alpha(t) - p \Delta t) \Bigr)
+    \end{align*}
+    % \item Our initial goal is to fit a model with the following form:
+    % \begin{align*}
+    %     y(t + \alpha) &= f \Big(y(t),\dots,y(t - L), X(t),\dots,X(t-p) \Big) \\
+    %     &= f \Big(y(t),\dots,y(t - L), \tilde{X}(t+\alpha),\dots,\tilde{X}(t+\alpha-p) \Big)
+    % \end{align*}
+\end{itemize}
+
+
+\end{document}
