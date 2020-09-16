@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  3 SEP 2020 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  11 SEP 2020 11:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/symh_prediction_notes.tex"
-(/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/symh_prediction_notes.tex
+**"/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/models.tex"
+(/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/models.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -227,8 +227,8 @@ LaTeX Info: Redefining \labelcpageref on input line 2370.
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count266
 \l__pdf_internal_box=\box48
-) (/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/symh_prediction_notes.aux)
-\openout1 = `symh_prediction_notes.aux'.
+) (/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/models.aux)
+\openout1 = `models.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
@@ -260,9 +260,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 16.
 LaTeX Info: Redefining \pageref on input line 16.
 LaTeX Info: Redefining \nameref on input line 16.
- (/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/symh_prediction_notes.out) (/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/symh_prediction_notes.out)
+ (/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/models.out) (/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/models.out)
 \@outlinefile=\write3
-\openout3 = `symh_prediction_notes.out'.
+\openout3 = `models.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -272,36 +272,31 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (1.31204pt too wide) detected at line 35
-[]
- []
-
-[1
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
+ [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 80.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
- (/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/symh_prediction_notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
-Package rerunfilecheck Info: File `symh_prediction_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 628D64927EE75C9E6076A475B487E837;252.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 80.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
+ (/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/models.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
+Package rerunfilecheck Info: File `models.out' has not changed.
+(rerunfilecheck)             Checksum: 4E8B28CA23629237DB946213CF469B15;126.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 7831 strings out of 480608
- 130988 string characters out of 5903631
- 412264 words of memory out of 5000000
- 23614 multiletter control sequences out of 15000+600000
- 540228 words of font info for 55 fonts, out of 8000000 for 9000
+ 7823 strings out of 480608
+ 130688 string characters out of 5903631
+ 411219 words of memory out of 5000000
+ 23613 multiletter control sequences out of 15000+600000
+ 540397 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,31p,332b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/symh_prediction_notes.pdf" (2 pages, 100469 bytes).
+ 34i,6n,31p,317b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on "/Users/daniong/Dropbox (University of Michigan)/GeoMagForecasting/code/SYMH-Prediction/notes/models.pdf" (1 page, 133092 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 82 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

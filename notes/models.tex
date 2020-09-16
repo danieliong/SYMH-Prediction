@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+
+\title{Models for SYM-H Prediction}
+\author{Daniel Iong}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Nonparametric models}
+\begin{enumerate}
+    \item Nonlinear additive autoregressive (exogenous) model (NAAR-X) 
+    \begin{itemize}
+        \item \url{https://www.jstor.org/stable/pdf/2290787.pdf}
+    \end{itemize}
+    \item Functional coefficient autoregressive model (FAR)
+    \begin{itemize}
+        \item \textbf{Special cases:} threshold autoregressive model (TAR),
+        exponential AR (EXPAR)
+    \end{itemize}
+\end{enumerate}
+
+\section{Nonlinear additive AR-X model}
+
+\begin{equation*}
+    y_t = f_1 (y_{t-l_1})  + f_2(y_{t-l_2}) + \dots + f_p (y_{t-l_p}) + g_1(x_{t - j_1}) + \dots + g_q(x_{t-j_q}) + \epsilon_t
+\end{equation*}
+
+\begin{itemize}
+    \item $x$ denotes exogenous variables, $l_1,\dots, l_p$ and $j_1,\dots,j_q$
+    denote time lags, and $\epsilon_t$ is white noise with variance $\sigma^2$
+    \item $f_i$, $g_j$ are estimated using nonparametric smoothing.
+    \item Interaction terms can be included as exogeneous variables
+\end{itemize}
+
+% \section{Functional coefficient AR model}
+
+% \begin{equation*}
+%     y_t = f_0(y_{t-d}) + f_1(y_{t-d}) y_{t-l_1} + \dots + f_p(y_{t-d}) y_{t-l_p} + \epsilon_t
+% \end{equation*}
+
+\section{Gaussian Process AR-X Model}
+
+
+
+
+
+\end{document}
